@@ -35,21 +35,6 @@
                 "type": "png"
             },
             {
-                "file": "images/digds-p24hr.png",
-                "name": "IMAGE_24_HOUR_MODE",
-                "type": "png"
-            },
-            {
-                "file": "images/Digds-am90.png",
-                "name": "IMAGE_AM_MODE",
-                "type": "png"
-            },
-            {
-                "file": "images/Digds-pm90.png",
-                "name": "IMAGE_PM_MODE",
-                "type": "png"
-            },
-            {
                 "file": "images/digds-percent.png",
                 "name": "IMAGE_TINY_PERCENT",
                 "type": "png"
