@@ -353,15 +353,10 @@ void update_battery(BatteryChargeState charge_state) {
 	layer_set_hidden(bitmap_layer_get_layer(battery_image_layer), true);
     layer_set_hidden(bitmap_layer_get_layer(battery_percent_layers[i]), false);
   }  
-  set_container_image(&battery_percent_image[0], battery_percent_layers[0], SEC_IMAGE_RESOURCE_IDS[charge_state.charge_percent/10], GPoint(112, 133));
-  set_container_image(&battery_percent_image[1], battery_percent_layers[1], SEC_IMAGE_RESOURCE_IDS[charge_state.charge_percent%10], GPoint(119, 133));
-  set_container_image(&battery_percent_image[2], battery_percent_layers[2], SEC_IMAGE_RESOURCE_IDS[10], GPoint(126, 133));
+  set_container_image(&battery_percent_image[0], battery_percent_layers[0], SEC_IMAGE_RESOURCE_IDS[charge_state.charge_percent/10], GPoint(112, 132));
+  set_container_image(&battery_percent_image[1], battery_percent_layers[1], SEC_IMAGE_RESOURCE_IDS[charge_state.charge_percent%10], GPoint(119, 132));
+  set_container_image(&battery_percent_image[2], battery_percent_layers[2], SEC_IMAGE_RESOURCE_IDS[10], GPoint(126, 132));
 
-//	  if (clock_is_24h_style()) {
- //		  set_container_image(&battery_percent_image[0], battery_percent_layers[0], SEC_IMAGE_RESOURCE_IDS[charge_state.charge_percent/10], GPoint(112, 133));
-	//	  set_container_image(&battery_percent_image[1], battery_percent_layers[1], SEC_IMAGE_RESOURCE_IDS[charge_state.charge_percent%10], GPoint(119, 133));
-  	//	  set_container_image(&battery_percent_image[2], battery_percent_layers[2], SEC_IMAGE_RESOURCE_IDS[10], GPoint(126, 156));
-	  //}
 }
 
 static void toggle_bluetooth_icon(bool connected) {
@@ -625,7 +620,7 @@ static void init(void) {
   	
   mask_image2 = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_MASK);
 	 GRect framemask2 = (GRect) {
-    .origin = { .x = 112, .y = 121 },
+    .origin = { .x = 112, .y = 120 },
     .size = { .w = 20, .h = 10 }
   };
   mask_layer2 = bitmap_layer_create(framemask2);
